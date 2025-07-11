@@ -1,14 +1,19 @@
-export interface AllCharacters {
+export interface UnifiedCharacter extends CharacterDetailResponse {
   uid: string;
   name: string;
   url: string;
+  properties: CharacterInfo;
 }
 
-export interface GetCharactersResponse {
-  results: AllCharacters[];
-  total_records: number;
+export interface CharacterDetailResponse {
+  message: string;
+  result: {
+    uid: string;
+    _id: string;
+    description: string;
+    properties: CharacterInfo;
+  };
 }
-
 
 export interface CharacterInfo {
   name: string;

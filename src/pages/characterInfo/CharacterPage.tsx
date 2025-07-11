@@ -18,8 +18,8 @@ import { CharacterInfo } from '../../interfaces/person';
 const CharacterPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [character, setCharacter] =  useState<CharacterInfo | null>(null);
-  const [description, setDescription] = useState<string[]>([])
+  const [character, setCharacter] = useState<CharacterInfo | null>(null);
+  const [description, setDescription] = useState<string>('');
 
   useEffect(() => {
     fetchCharacter();
@@ -32,10 +32,9 @@ const CharacterPage = () => {
     } else {
       const res = await getCharacterById(id!);
       setCharacter(res.properties);
-      setDescription(res.description)
+      setDescription(res.description);
     }
   };
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!character) return;
@@ -130,7 +129,6 @@ const CharacterPage = () => {
               variant="outlined"
             />
           </Stack>
-
 
           <Box mt={4} textAlign="center">
             <Button
