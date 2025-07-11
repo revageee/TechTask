@@ -2,7 +2,7 @@
 import React from 'react'; // або будь-який інший import
 
 const SearchBar = () => {
-    return <input />;
+  return <input />;
 };
 
 export default SearchBar;

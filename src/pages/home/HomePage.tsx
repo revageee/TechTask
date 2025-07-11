@@ -14,10 +14,12 @@ import {
   Paper,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { UnifiedCharacter } from '../../interfaces/person';
 
 const HomePage = () => {
   const [search, setSearch] = useState('');
-  const [characters, setCharacters] = useState<any[]>([]);
+  const [characters, setCharacters] = useState<UnifiedCharacter[]>([]);
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(6);
   const [totalPages, setTotalPages] = useState(1);
@@ -25,14 +27,28 @@ const HomePage = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [page, debouncedSearch, pageSize]);
 
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearch(search);
+      setPage(1);
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [search]);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(event.target.value);
+  };
 
   const fetchData = async () => {
     setLoading(true);
     try {
-      const res = await getCharacters(page, search, pageSize);
-      setCharacters(res.results);
+      const res = await getCharacters(page, pageSize, debouncedSearch);
+      setCharacters(res?.results);
       setTotalPages(res.totalPages);
     } finally {
       setLoading(false);
@@ -58,10 +74,8 @@ const HomePage = () => {
             variant="outlined"
             size="medium"
             value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              setPage(1);
-            }}
+            disabled={loading}
+            onChange={handleChange}
             InputProps={{
               startAdornment: <SearchIcon color="action" sx={{ mr: 1 }} />,
             }}
@@ -76,6 +90,7 @@ const HomePage = () => {
               labelId="page-size-label"
               value={pageSize}
               label="Items per page"
+              disabled={loading}
               onChange={(e) => {
                 setPageSize(Number(e.target.value));
                 setPage(1);
@@ -115,16 +130,20 @@ const HomePage = () => {
         )}
       </Grid>
 
-      <Box mt={5} display="flex" justifyContent="center" >
+      <Box mt={5} display="flex" justifyContent="center">
         <Pagination
           count={totalPages}
           page={page}
-          onChange={(_, p) => setPage(p)}
+          onChange={(_, p) => {
+            setPage(p);
+            setSearch('');
+          }}
           shape="rounded"
           color="primary"
           size="large"
           showFirstButton
           showLastButton
+          disabled={loading}
         />
       </Box>
     </Box>

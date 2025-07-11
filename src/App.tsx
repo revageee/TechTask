@@ -5,12 +5,12 @@ import CharacterPage from './pages/characterInfo/CharacterPage';
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/character/:id" element={<CharacterPage />} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/character/:id" element={<CharacterPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
