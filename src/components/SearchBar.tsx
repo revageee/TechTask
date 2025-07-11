@@ -1,5 +1,4 @@
-// src/components/SearchBar.tsx
-import React from 'react'; // або будь-який інший import
+import React from 'react';
 
 const SearchBar = () => {
   return <input />;
