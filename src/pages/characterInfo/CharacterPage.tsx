@@ -26,11 +26,13 @@ const CharacterPage = () => {
   }, []);
 
   const fetchCharacter = async () => {
-    const local = getSavedCharacter(id!);
+    if (!id) return;
+
+    const local = getSavedCharacter(id);
     if (local) {
       setCharacter(local);
     } else {
-      const res = await getCharacterById(id!);
+      const res = await getCharacterById(id);
       setCharacter(res.properties);
       setDescription(res.description);
     }
@@ -48,7 +50,8 @@ const CharacterPage = () => {
   };
 
   const handleSave = () => {
-    saveCharacter(id!, character);
+    if (!id || !character) return;
+    saveCharacter(id, character);
   };
 
   if (!character)

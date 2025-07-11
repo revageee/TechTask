@@ -4,17 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff6105a9-0427-4b88-a427-06e64b78932b" name="Changes" comment="first commit 2.0">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="ff6105a9-0427-4b88-a427-06e64b78932b" name="Changes" comment="fixed pagination and searching">
+      <change afterPath="$PROJECT_DIR$/src/_tests_/CharacterCard.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_tests_/CharacterPage.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_tests_/HomePage.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_tests_/api.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_tests_/localStorageUtils.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_tests_/types.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jest.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CharacterCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/interfaces/person.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/person.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/characterInfo/CharacterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/characterInfo/CharacterPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/localStorageUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/localStorageUtils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,25 +47,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\projects\\TechTask\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Jest.CharacterPage.should render loading state initially.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/projects/TechTask/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "D:/projects/TechTask/node_modules/react-scripts",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\projects\\TechTask\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\TechTask\src" />
+      <recent name="D:\projects\TechTask\src\_tests_" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CharacterPage.should render loading state initially" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/src" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/_tests_/CharacterPage.test.tsx" />
+      <test-names>
+        <test-name value="CharacterPage" />
+        <test-name value="should render loading state initially" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.CharacterPage.should render loading state initially" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,7 +112,7 @@
       <workItem from="1752182308665" duration="381000" />
       <workItem from="1752236420824" duration="1437000" />
       <workItem from="1752237964741" duration="656000" />
-      <workItem from="1752238637164" duration="4088000" />
+      <workItem from="1752238637164" duration="6520000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -95,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752182444900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed pagination and searching">
+      <option name="closed" value="true" />
+      <created>1752242791505</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752242791505</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="first commit 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit 2.0" />
+    <MESSAGE value="fixed pagination and searching" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed pagination and searching" />
   </component>
 </project>

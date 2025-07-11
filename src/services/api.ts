@@ -3,6 +3,8 @@ import {
   CharacterDetailResponse,
   CharacterInfo,
   UnifiedCharacter,
+  CharacterSearchResponse,
+  CharacterListResponse,
 } from '../interfaces/person';
 
 const BASE_URL = 'https://swapi.tech/api';
@@ -19,15 +21,13 @@ export const getCharacters = async (
     ? `${BASE_URL}/people?name=${name}`
     : `${BASE_URL}/people?page=${page}&limit=${limit}`;
 
-  const res = await axios.get(url);
-  const data = res.data;
-
   if (name) {
-    const mapped = data.result.map((item: any) => ({
-      ...item.properties,
+    const res = await axios.get<CharacterSearchResponse>(url);
+    const mapped: UnifiedCharacter[] = res.data.result.map((item) => ({
       uid: item.uid,
-      description: item.description,
-      _id: item._id,
+      name: item.properties.name,
+      url: item.properties.url,
+      properties: item.properties,
     }));
     return {
       results: mapped,
@@ -35,10 +35,17 @@ export const getCharacters = async (
     };
   }
 
-  // Без пошуку - список з uid, name, url
+  const res = await axios.get<CharacterListResponse>(url);
+  const mapped: UnifiedCharacter[] = res.data.results.map((item) => ({
+    uid: item.uid,
+    name: item.name,
+    url: item.url,
+    properties: {} as CharacterInfo,
+  }));
+
   return {
-    results: data.results,
-    totalPages: Math.ceil(data.total_records / limit),
+    results: mapped,
+    totalPages: Math.ceil(res.data.total_records / limit),
   };
 };
 
