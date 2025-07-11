@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff6105a9-0427-4b88-a427-06e64b78932b" name="Changes" comment="fixed pagination and searching">
-      <change afterPath="$PROJECT_DIR$/src/_tests_/CharacterCard.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/CharacterPage.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/HomePage.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/api.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/localStorageUtils.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_tests_/types.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jest.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/person.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/person.ts" afterDir="false" />
+    <list default="true" id="ff6105a9-0427-4b88-a427-06e64b78932b" name="Changes" comment="added tests &#10;fixed types">
       <change beforePath="$PROJECT_DIR$/src/pages/characterInfo/CharacterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/characterInfo/CharacterPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/localStorageUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/localStorageUtils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,28 +33,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Jest.CharacterPage.should render loading state initially.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/projects/TechTask/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "D:/projects/TechTask/node_modules/react-scripts",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "D:\\projects\\TechTask\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Jest.CharacterPage.should render loading state initially.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/TechTask/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;D:/projects/TechTask/node_modules/react-scripts&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\projects\\TechTask\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\TechTask\src" />
@@ -91,6 +77,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.CharacterPage.should render loading state initially" />
+        <item itemvalue="Jest.CharacterPage.should render loading state initially" />
         <item itemvalue="Jest.CharacterPage.should render loading state initially" />
       </list>
     </recent_temporary>

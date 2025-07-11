@@ -4,13 +4,11 @@ import CharacterPage from '../pages/characterInfo/CharacterPage';
 import { getCharacterById } from '../services/api';
 import { getSavedCharacter, saveCharacter } from '../utils/localStorageUtils';
 
-// Мокируем API
 jest.mock('../services/api');
 const mockedGetCharacterById = getCharacterById as jest.MockedFunction<
   typeof getCharacterById
 >;
 
-// Мокируем localStorage utils
 jest.mock('../utils/localStorageUtils');
 const mockedGetSavedCharacter = getSavedCharacter as jest.MockedFunction<
   typeof getSavedCharacter
@@ -78,7 +76,6 @@ describe('CharacterPage', () => {
 
     render(<CharacterPage />);
 
-    // Ждем, пока компонент загрузится и покажет кнопку "Назад"
     await waitFor(() => {
       expect(screen.getByText('← Back')).toBeInTheDocument();
     });
